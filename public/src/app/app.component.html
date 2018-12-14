@@ -1,0 +1,14 @@
+<nav class="navbar" style="text-align: center; background-color: blanchedalmond">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <h1>
+              {{ title }}
+            </h1>
+      </div>
+      <div class="navbar">
+        <a class="navbar-brand" [routerLink]="['/']"><button class="btn btn-primary">Dashboard</button></a>
+        <a class="navbar-brand" [routerLink]="['/newtruck']"><button class="btn btn-primary">New Truck</button></a>
+      </div>
+    </div>
+  </nav>
+<router-outlet></router-outlet>

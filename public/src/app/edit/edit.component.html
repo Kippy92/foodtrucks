@@ -1,0 +1,28 @@
+<div *ngIf="truck">
+    <form  (submit)="update(truck._id)">
+      <div class ="form-group">
+        <label for="truck.name">Truck Name: </label>
+        <div>
+          <input type="text" name="truck.name" [(ngModel)]="truck.name" placeholder="name">
+          <p *ngIf="errors.name"> {{errors.name.message}}</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="truck.style">Truck Style: </label>
+        <div>
+          <input type="text" name="truck.style" [(ngModel)]="truck.style" placeholder="style">
+          <p *ngIf="errors.style"> {{errors.style.message}}</p>
+        </div>
+      </div>
+      <div class ="form-group">
+        <label for="truck.description">Truck Description: </label>
+        <div>
+          <textarea name="truck.description" [(ngModel)]="truck.description" rows=5 cols=50></textarea>
+          <p *ngIf="errors.description"> {{errors.description.message}}</p>
+        </div>
+      </div>
+      <input type="submit" value="Update a Truck" class='btn btn-success'/>
+      <button class='btn btn-danger' (click) = "delete(truck._id)">Delete</button>
+    </form>
+  
+  </div>

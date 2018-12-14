@@ -1,0 +1,9 @@
+<div *ngFor="let truck of trucks">
+  <h2> {{truck.name}}</h2>
+  <p> Style: {{truck.style}}</p>
+  <p *ngIf="truck.avgreview != 0"> Average Rating: {{truck.avgreview}} </p>
+  <p *ngIf="truck.avgreview == 0"> No Ratings Yet </p>
+  <a [routerLink]="['/truck', truck._id]"><button class = 'btn btn-success'>review</button></a>
+  <a [routerLink]="['/edit', truck._id]"><button class = 'btn btn-default'>update</button></a>
+  <hr>
+</div>
